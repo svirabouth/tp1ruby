@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <body>
+ 
+	<table>
+		<tr><td>
+			<form action="/disconnect" method="POST">
+				<input type="submit" value="Se Déconnecter"/>
+			</form>
+		</td><td>
+			<form action="/refresh" method="POST">
+				<input type="submit" value="Actualiser"/>
+			</form>
+		</td></tr>
+	</table>
+	<h1>Bonjour <%=session[:user] %></h1>
+	<table style="width: 200px;height: 400px;overflow:auto; border-width:1px; 
+ border-style:solid; 
+ border-color:black;
+ width:50%;border-collapse: collapse;"> 
+		<thead>
+			<tr style=" border-bottom: 1pt solid black;">
+				<td>Auteur</td><td>Message</td>
+			</tr>
+		</thead>		
+		<tbody >
+		<% @messages.each do |message| %>
+			<tr >
+				<td class="auteur"><%=message["auteur"] %></td>
+				<td rowspan="2" class="message"><%=message["message"] %></td>
+			</tr>
+			<tr style=" border-bottom: 1pt solid black;">
+				<td class="date">Envoyé le <%=message["date"] %></td>
+				
+			<tr/>
+		<% end %>
+		</tbody>
+	</table>
+	
+	<form action="/chat/insertMessage" method="POST">
+		<input type="text" name="message"/>
+		<input type="submit" value="Envoyer"/>
+	</form>
+  </body>
+</html>

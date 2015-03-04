@@ -1,0 +1,4 @@
+# config.ru
+require './chat'
+use Rack::Session::Cookie, :expire_after => 2592000 # In seconds
+run MyApp
