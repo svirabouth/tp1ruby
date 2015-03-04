@@ -3,14 +3,16 @@
 	<body>
 		<h1>Chat en RUBY</h1>
 		<form name="login" action="/connection" method="post" accept-charset="utf-8">  
-			 
+			 <ul style="list-style-type:none;" >
 				<li><label for="user">user</label>  
 				<input type="user" name="user" placeholder="username" required></li>  
 				<li><label for="password">Password</label>  
 				<input type="password" name="password" placeholder="password" required></li>  
 				<li>  
 				<input type="submit" value="Login"></li>  
-			
+				<li style="color:red;"><%=@status %></li>
+			</ul>
 		</form>  
 	</body>
 </html>
+
