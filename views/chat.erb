@@ -14,9 +14,9 @@
 	</table>
 	
 	<h1>Bonjour <%=session[:user] %></h1>
-<div style="overflow:auto;height:400px;width:350px">
+<div style="overflow:auto;height:400px;width:450px">
 		
-	<table style="width: 300px;height: 400px;overflow:auto; border-width:1px; 
+	<table style="width: 350px;height: 400px;overflow:auto; border-width:1px; 
  border-style:solid; 
  border-color:black;
  width:50%;border-collapse: collapse;"> 
@@ -29,7 +29,7 @@
 		<% @messages.each do |message| %>
 			<tr >
 				<td class="auteur"><%=message["auteur"] %></td>
-				<td rowspan="2" class="message"><%=message["message"] %></td>
+				<td rowspan="2" class="message" style="text-align:right"><%=message["message"] %></td>
 			</tr>
 			<tr style=" border-bottom: 1pt solid black;">
 				<td class="date">Envoyé le <%=message["date"] %></td>
