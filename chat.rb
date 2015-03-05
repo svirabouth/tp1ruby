@@ -127,7 +127,7 @@ class MyApp < Sinatra::Base
 	post '/connection' do
 		if !params[:user].nil?		
 			user = params[:user]
-			password = params[:password]
+			password = params[:pass]
 			connection(user,password)
 		end
 		if connected == 0
