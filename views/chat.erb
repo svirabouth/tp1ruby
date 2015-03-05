@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <body>
- 
+ 	<div style="overflow:auto;height:100px">
 	<table>
 		<tr><td>
 			<form action="/disconnect" method="POST">
@@ -13,6 +13,7 @@
 			</form>
 		</td></tr>
 	</table>
+	</div>
 	<h1>Bonjour <%=session[:user] %></h1>
 	<table style="width: 200px;height: 400px;overflow:auto; border-width:1px; 
  border-style:solid; 
