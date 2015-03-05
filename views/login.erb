@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>ChatProject - Login</title>
+		<link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+    	<link rel="stylesheet" href="style.css">
+	</head>
 	<body>
+		 <div class="login-card">
 		<h1>Chat en RUBY</h1>
 		<form name="login" action="/connection" method="post" accept-charset="utf-8">  
-			 <ul style="list-style-type:none;" >
-				<li><label for="user">user</label>  
-				<input type="user" name="user" placeholder="username" required></li>  
-				<li><label for="password">Password</label>  
-				<input type="password" name="password" placeholder="password" required></li>  
-				<li>  
-				<input type="submit" value="Login"></li>  
-				<li style="color:red;"><%=@status %></li>
-			</ul>
+				<input type="text" name="user" placeholder="username" required>
+				<input type="password" name="pass" placeholder="password" required>   
+				<input type="submit" name="login" class="login login-submit" value="Login">
+				<p style="color:red;"><%=@status %></p>
 		</form>  
+</div>
+<script src='http://codepen.io/assets/libs/fullpage/jquery_and_jqueryui.js'></script>
 	</body>
 </html>
 
