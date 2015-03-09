@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <p></p> 
-	<table>
+ 	<table>
 		<tr><td>
 			<form action="/disconnect" method="POST">
 				<input type="submit" value="Se Déconnecter"/>
@@ -12,11 +11,12 @@
 				<input type="submit" value="Actualiser"/>
 			</form>
 		</td></tr>
+	</table>
+	
 	<h1>Bonjour <%=session[:user] %></h1>
-	<table style="width: 200px;height: 400px;overflow:auto; border-width:1px; 
- border-style:solid; 
- border-color:black;
- width:50%;border-collapse: collapse;"> 
+<div style="overflow:auto;height:400px;width:450px">
+		
+	<table style="width: 350px;height: 400px;overflow:auto; border-width:1px;width:50%;border-collapse: collapse;"> 
 		<thead>
 			<tr style=" border-bottom: 1pt solid black;">
 				<td>Auteur</td><td>Message</td>
@@ -26,16 +26,16 @@
 		<% @messages.each do |message| %>
 			<tr >
 				<td class="auteur"><%=message["auteur"] %></td>
-				<td rowspan="2" class="message"><%=message["message"] %></td>
+				<td rowspan="2" class="message" style="text-align:right;border-bottom: 1pt solid black;"><%=message["message"] %></td>
 			</tr>
-			<tr style=" border-bottom: 1pt solid black;">
+			<tr>
 				<td class="date">Envoyé le <%=message["date"] %></td>
 				
 			<tr/>
 		<% end %>
 		</tbody>
 	</table>
-	
+	</div>
 	<form action="/chat/insertMessage" method="POST">
 		<input type="text" name="message"/>
 		<input type="submit" value="Envoyer"/>
