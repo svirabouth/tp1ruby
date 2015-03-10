@@ -2,12 +2,11 @@
 <html>
   <head>
   <script>
-	  	var height = 0;
 	 
 	function scrollBas()
 	{
-	    height = document.getElementById('chat_main').scrollHeight;
-	    document.getElementById('chat_main').scrollTo(0, height);
+	   
+	   window.document.getElementById('chat_main').scrollTop = window.document.getElementById('chat_main').scrollHeight;
 	}
   </script>
   </head>
