@@ -7,10 +7,10 @@
 	{
 	   window.document.getElementById('chat_main').scrollTop = window.document.getElementById('chat_main').scrollHeight;
 	}
-	window.onload=scrollBas();
+	
   </script>
   </head>
-  <body>
+  <body onload="scrollBas();">
  	<table>
 		<tr><td>
 			<form action="/disconnect" method="POST">
