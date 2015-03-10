@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  <script>
+	  	var height = 0;
+	 
+	function scrollBas()
+	{
+	    height = document.getElementById('chat_main').scrollHeight;
+	    document.getElementById('chat_main').scrollTo(0, height);
+	}
+  </script>
+  </head>
   <body>
  	<table>
 		<tr><td>
@@ -14,7 +25,7 @@
 	</table>
 	
 	<h1>Bonjour <%=session[:user] %></h1>
-<div style="overflow:auto;height:400px;width:450px">
+<div id="chat_main" style="overflow:auto;height:400px;width:450px">
 		
 	<table style="width: 350px;height: 400px;overflow:auto; border-width:1px;width:50%;border-collapse: collapse;"> 
 		<thead>
